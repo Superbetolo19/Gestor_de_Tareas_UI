@@ -1,0 +1,17 @@
+public vertice getVertice(String nombre){
+        vertice aux=inicio;
+        if(!vacio()){
+            while(nombre!=aux.getNombre()&& nombre!=aux.getId()){
+                if (aux.getSig()==null) {
+                    aux=null;
+                    return aux;
+                }
+                aux=aux.getSig();
+            }
+        }
+        else{
+            aux=null;
+            return aux;
+        }
+        return aux;  
+    }
